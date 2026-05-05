@@ -1,12 +1,23 @@
-import { dark } from '@mui/material/styles/createPalette'
-import React from 'react'
+import { useState } from 'react';
 
-const DarkModeToggle = () => ({darkMode, setIsDarkMode}) =>{
-  // TODO: Implement dark mode toggle logic
 
-  return (
-    <button onClick= {() => setIsDarkMode(!isDarkMode)}>Toggle Dark Mode {isDarkMode ? 'Light' : 'Dark'}</button>
-  )
+
+
+function DarkModeToggle({darkMode, setDarkMode}){
+    
+
+    return (
+
+            <button onClick ={() => setDarkMode(!darkMode)}>
+                {darkMode ? 'Toggle light mode':'Toggle dark mode'}
+            </button>
+
+    
+    )
+
+
+
+
 }
 
-export default DarkModeToggle
+export default DarkModeToggle;
